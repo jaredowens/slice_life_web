@@ -11,11 +11,20 @@ function closeSidebar() {
 document.addEventListener('click', function(event) {
     const sidebar = document.getElementById('sidebar');
     const menuToggle = document.querySelector('.menu-toggle');
+
+    // Close sidebar if user clicks outside of it
     if (!sidebar.contains(event.target) && !menuToggle.contains(event.target)) {
         closeSidebar();
     }
 });
 
+// Dropdown toggle function
+function toggleDropdown(id) {
+    const dropdown = document.getElementById(id);
+    dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+}
+
+// Ensure font and styles load properly
 document.addEventListener("DOMContentLoaded", function() {
     // Load the Alex Brush font
     const link = document.createElement("link");
@@ -47,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Add the text inside the text box
     const heading = document.createElement("h1");
     heading.style.fontFamily = "\"Alex Brush\", cursive";
-    heading.style.fontSize = "3rem";  // You can adjust the font size here
+    heading.style.fontSize = "3rem";  // Adjust the font size
     heading.style.color = "white";    // Set the text color to white
     heading.innerHTML = "Embrace The Slice"; // Text content
     

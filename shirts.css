@@ -1,0 +1,175 @@
+body {
+    background: url('neon\ backdrop.webp') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color:  rgb(216, 29, 29);
+    color: black;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Ensures proper spacing */
+    width: 100%;
+    padding: 0 20px;
+}
+
+.cart-button {
+    text-decoration: none;
+    font-size: 18px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 8px 15px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+    color: black;
+    transition: 0.3s;
+}
+
+.cart-button:hover {
+    background: white;
+}
+
+.logo-text {
+    font-family: 'Alex Brush', cursive;
+    font-size: 48px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    margin-top: 1px;
+}
+
+.menu-toggle {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: black;
+}
+
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: black;
+    padding-top: 60px;
+    transition: left 0.3s;
+    z-index: 3;
+}
+
+#sidebar.open {
+    left: 0;
+}
+
+#sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+#sidebar ul li {
+    padding: 15px;
+    text-align: center;
+}
+
+#sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+#sidebar ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main content section to allow scrolling */
+main {
+    flex-grow: 1; /* Allows the content to expand and push the footer down */
+    text-align: center;
+    padding: 20px;
+}
+
+.text-box {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 80%;
+    margin: 50px auto;
+}
+
+.page-title {
+    font-family: 'Alex Brush', cursive;
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+}
+
+.product-box {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 250px;
+    min-height: 300px;
+}
+
+.product-box img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.product-box p {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Footer at the bottom */
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+    position: relative; /* Ensures it stays at the bottom after scrolling */
+    margin-top: auto; /* Pushes the footer to the bottom when content is short */
+}
+
+.footer-text {
+    font-family: 'Alex Brush', cursive;
+    font-size: 24px;
+}

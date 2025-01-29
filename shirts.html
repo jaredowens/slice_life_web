@@ -4,22 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apparel - Slice Life</title>
-    <link rel="stylesheet" href="apparel.css">
+    <link rel="stylesheet" href="shirts.css">
     <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <header>
         <div class="header-content">
-            <h1 class="logo-text">Slice Life</h1>
             <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+            <h1 class="logo-text">Slice Life</h1>
+            <a href="cart.html" class="cart-button">
+                🛒 Cart
+            </a>
         </div>
     </header>
 
     <aside class="sidebar" id="sidebar">
         <ul>
             <li><a href="index.html" onclick="closeSidebar()">Home</a></li>
-    
+            
             <!-- Apparel Dropdown -->
             <li>
                 <a href="#" onclick="toggleDropdown('apparelDropdown')">Apparel ▼</a>
@@ -36,6 +39,9 @@
                     <li><a href="OG Collection.html" onclick="closeSidebar()">OG Collection</a></li>
                 </ul>
             </li>
+    
+            <!-- Cart Option at the Bottom -->
+            <li><a href="cart.html" onclick="closeSidebar()">🛒 Cart</a></li>
         </ul>
     </aside>
     
@@ -60,7 +66,7 @@
 
     <main>
         <div class="text-box">
-            <h1 class="page-title">Apparel</h1>
+            <h1 class="page-title">Shirts</h1>
             <p>Explore our exclusive apparel collection.</p>
         </div>
 
@@ -80,14 +86,6 @@
             <div class="product-box">
                 <p>White and Black Tee</p>
                 <img src="images/placeholder.png" alt="White and Black Tee">
-            </div>
-            <div class="product-box">
-                <p>OG Slice Hat</p>
-                <img src="images/placeholder.png" alt="OG Slice Hat">
-            </div>
-            <div class="product-box">
-                <p>The Slice Cap</p>
-                <img src="images/placeholder.png" alt="The Slice Cap">
             </div>
         </div>
     </main>

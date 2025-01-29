@@ -4,7 +4,7 @@ body {
 }
 
 header {
-    background-color:  rgb(216, 29, 29);
+    background-color: rgb(216, 29, 29);
     color: black;
     text-align: center;
     padding: 10px;
@@ -14,9 +14,9 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
-
-.header-title {
+.logo-text {
     font-family: 'Alex Brush', cursive;
     font-size: 48px;
     position: relative;
@@ -25,14 +25,40 @@ header {
     margin: 0;
     margin-top: 1px;
 }
-
-
 .menu-toggle {
     position: absolute;
     left: 13px; 
-    top: 3.6%;
+    top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: black;
+}
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Ensures proper spacing */
+    width: 100%;
+    padding: 0 20px;
+}
+
+.cart-button {
+    text-decoration: none;
+    font-size: 18px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 8px 15px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    font-family: Arial, sans-serif; /* Ensures cart button text uses Arial */
+    font-weight: bold; /* Makes text bold */
+    color: black;
+    transition: 0.3s;
+}
+
+.cart-button:hover {
+    background: white;
 }
 
 .sidebar {
@@ -41,14 +67,18 @@ header {
     left: -250px;
     width: 250px;
     height: 100%;
-    background: black;
-    color: white;
-    transition: left 0.3s;
+    background-color: black;
     padding-top: 60px;
+    transition: left 0.3s;
+    z-index: 3;
+}
+
+.sidebar.open {
+    left: 0;
 }
 
 .sidebar ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
 }
 
@@ -67,40 +97,17 @@ header {
     text-decoration: underline;
 }
 
-.sidebar.open {
-    left: 0;
+
+/* Dropdown Styling */
+.dropdown {
+    display: none;
+    list-style: none;
+    padding-left: 15px;
+    background: rgba(255, 255, 255, 0.1);
 }
 
-main {
-   font:  'Alex Brush', cursive;
-    text-align: center;
-    padding: 20px;
-    border: 3px  rgb(165, 9, 9);
-}
-
-.apparel-container {
-    text-align: center;
-    margin: 20px;
-}
-
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    justify-items: center;
-}
-
-.product-box {
-    border: 2px solid black;
-    padding: 20px;
-    text-align: center;
-    background: white;
-    max-width: 250px;
-}
-
-.product-box img {
-    width: 100%;
-    height: auto;
+.dropdown li {
+    padding: 5px 0;
 }
 
 footer {
