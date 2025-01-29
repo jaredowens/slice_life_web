@@ -26,7 +26,10 @@
     
     <footer>
         <h1 class="footer-title">Slice Life</h1>
-        <p>&copy; 2025 Slice Life. All Rights Reserved.</p>
+        <p>&copy; <span style="font-family: sans-serif;" id="year"></span> <span style="font-family: sans-serif;"  Slice Life. ></span> <span style="font-family: sans-serif;">All Rights Reserved.</span></p>
+        <script>
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
     </footer>
-</body>
-</html>
+    </body>
+    </html>
