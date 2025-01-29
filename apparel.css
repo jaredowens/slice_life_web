@@ -1,101 +1,122 @@
 body {
+    background: url('slice-life-background.png') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between;
+    overflow-y: auto;
     margin: 0;
     font-family: Arial, sans-serif;
 }
 
 header {
-    background-color: red;
+    background-color: rgb(255, 90, 90);
     color: black;
+    padding: 15px;
     text-align: center;
-    padding: 20px;
-    font-family: 'Alex Brush', cursive;
     font-size: 24px;
+    font-weight: bold;
+}
+
+.logo-text {
+    font-family: 'Alex Brush', cursive;
+    font-size: 36px;
+    margin: 0;
+}
+
+.header-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.header-title {
-    margin-left: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .menu-toggle {
-    font-size: 30px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: black;
     cursor: pointer;
-    margin-right: 20px;
 }
 
-.sidebar {
+#sidebar {
     position: fixed;
-    top: 0;
     left: -250px;
+    top: 0;
     width: 250px;
     height: 100%;
-    background: black;
-    color: white;
+    background-color: black;
+    padding-top: 20px;
     transition: left 0.3s;
-    padding-top: 60px;
 }
 
-.sidebar ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.sidebar ul li {
-    padding: 15px;
-    text-align: center;
-}
-
-.sidebar ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-}
-
-.sidebar ul li a:hover {
-    text-decoration: underline;
-}
-
-.sidebar.open {
+#sidebar.open {
     left: 0;
 }
 
-main {
-    text-align: center;
+#sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+#sidebar ul li {
+    padding: 10px;
+}
+
+#sidebar ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.text-box {
+    background: rgba(255, 255, 255, 0.8);
     padding: 20px;
-}
-
-.apparel-container {
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     text-align: center;
-    margin: 20px;
+    max-width: 80%;
+    margin: 50px auto;
 }
 
-.product-grid {
+.page-title {
+    font-family: 'Alex Brush', cursive;
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.product-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
-    justify-items: center;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
 }
 
 .product-box {
-    border: 2px solid black;
+    background: rgba(255, 255, 255, 0.8);
     padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     text-align: center;
-    background: white;
-    max-width: 250px;
 }
 
 .product-box img {
     width: 100%;
-    height: auto;
+    border-radius: 10px;
 }
 
 footer {
     background-color: black;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 15px;
+    margin-top: auto;
+}
+
+.footer-text {
     font-family: 'Alex Brush', cursive;
     font-size: 24px;
 }

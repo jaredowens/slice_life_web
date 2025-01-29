@@ -6,38 +6,62 @@
     <title>Apparel - Slice Life</title>
     <link rel="stylesheet" href="apparel.css">
     <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
-    <script defer src="apparel.js"></script>
 </head>
 <body>
-    <header>
-        <h1 class="header-title">Apparel</h1>
-        <nav>
-            <span class="menu-toggle" onclick="toggleSidebar()">&#9776;</span>
-        </nav>
-    </header>
-    
-    <aside class="sidebar" id="sidebar">
-        <ul>
-            <li><a href="index.html" onclick="closeSidebar()">Home</a></li>
-            <li><a href="apparel.html" onclick="closeSidebar()">Apparel</a></li>
-        </ul>
-    </aside>
 
-    <main class="apparel-container">
-        <h1>Our Apparel Collection</h1>
-        <div class="product-grid">
-            <div class="product-box"><p>Red Tee</p><img src="images/placeholder.png" alt="Slice Life Placeholder"></div>
-            <div class="product-box"><p>Black Tee</p><img src="images/placeholder.png" alt="Slice Life Placeholder"></div>
-            <div class="product-box"><p>White and Red Tee</p><img src="images/placeholder.png" alt="Slice Life Placeholder"></div>
-            <div class="product-box"><p>White and Black Tee</p><img src="images/placeholder.png" alt="Slice Life Placeholder"></div>
-            <div class="product-box"><p>OG Slice Hat</p><img src="images/placeholder.png" alt="Slice Life Placeholder"></div>
-            <div class="product-box"><p>The Slice Cap</p><img src="images/placeholder.png" alt="Slice Life Placeholder"></div>
+    <header>
+        <div class="header-content">
+            <h1 class="logo-text">Slice Life</h1>
+            <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+        </div>
+    </header>
+
+    <nav id="sidebar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="apparel.html">Apparel</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="text-box">
+            <h1 class="page-title">Apparel</h1>
+            <p>Explore our exclusive apparel collection.</p>
+        </div>
+
+        <div class="product-container">
+            <div class="product-box">
+                <p>Red Tee</p>
+                <img src="images/placeholder.png" alt="Red Tee">
+            </div>
+            <div class="product-box">
+                <p>Black Tee</p>
+                <img src="images/placeholder.png" alt="Black Tee">
+            </div>
+            <div class="product-box">
+                <p>White and Red Tee</p>
+                <img src="images/placeholder.png" alt="White and Red Tee">
+            </div>
+            <div class="product-box">
+                <p>White and Black Tee</p>
+                <img src="images/placeholder.png" alt="White and Black Tee">
+            </div>
+            <div class="product-box">
+                <p>OG Slice Hat</p>
+                <img src="images/placeholder.png" alt="OG Slice Hat">
+            </div>
+            <div class="product-box">
+                <p>The Slice Cap</p>
+                <img src="images/placeholder.png" alt="The Slice Cap">
+            </div>
         </div>
     </main>
-    
+
     <footer>
-        <h1 class="footer-title">Slice Life</h1>
-        <p>&copy; 2025 Slice Life. All Rights Reserved.</p>
+        <p class="footer-text">Slice Life</p>
     </footer>
+
+    <script src="apparel.js"></script>
+
 </body>
 </html>
