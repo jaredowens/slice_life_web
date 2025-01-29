@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: red;
+    color: black;
+    text-align: center;
+    padding: 20px;
+    font-family: 'Alex Brush', cursive;
+    font-size: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-title {
+    margin-left: 20px;
+}
+
+.menu-toggle {
+    font-size: 30px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: black;
+    color: white;
+    transition: left 0.3s;
+    padding-top: 60px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 15px;
+    text-align: center;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.sidebar ul li a:hover {
+    text-decoration: underline;
+}
+
+.sidebar.open {
+    left: 0;
+}
+
+main {
+    text-align: center;
+    padding: 20px;
+}
+
+.apparel-container {
+    text-align: center;
+    margin: 20px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.product-box {
+    border: 2px solid black;
+    padding: 20px;
+    text-align: center;
+    background: white;
+    max-width: 250px;
+}
+
+.product-box img {
+    width: 100%;
+    height: auto;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-family: 'Alex Brush', cursive;
+    font-size: 24px;
+}
