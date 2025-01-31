@@ -72,17 +72,26 @@ header {
 #sidebar {
     position: fixed;
     top: 0;
-    left: -250px;
+    left: -250px;  /* Sidebar off-screen initially */
     width: 250px;
     height: 100%;
     background-color: black;
     padding-top: 60px;
-    transition: left 0.3s;
+    transition: left 0.3s ease-in-out; /* Smooth transition for slide-in */
     z-index: 3;
 }
 
 #sidebar.open {
-    left: 0;
+    left: 0;  /* Sidebar slides in when 'open' class is added */
+}
+
+/* Sidebar dropdowns - hidden by default */
+.sidebar-dropdown {
+    display: none; /* Hide dropdowns initially */
+}
+
+.sidebar-dropdown.open {
+    display: block; /* Show dropdowns when the 'open' class is added */
 }
 
 #sidebar ul {

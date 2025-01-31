@@ -42,19 +42,23 @@ function loadProductDetails() {
     if (name) {
         document.getElementById('product-name').textContent = name;
     }
+    
+    const productImage = document.getElementById('product-image');
     if (image) {
-        const productImage = document.getElementById('product-image');
-        productImage.onload = function() {
-            console.log("Image loaded successfully:", image);
+        console.log("Attempting to load image:", image); // Debug log
+        productImage.src = image;
+        productImage.onload = function () {
+            console.log("Image loaded successfully.");
         };
         productImage.onerror = function() {
             console.error("Image failed to load:", image);
-            this.src = 'fallback.jpg';  // Use a placeholder image if the original fails
+            productImage.src = 'fallback.jpg'; // Ensure this exists in the project
         };
-        productImage.src = image; // Set the image URL once
     } else {
         console.warn("No image URL provided in query parameters.");
+        productImage.src = 'fallback.jpg';
     }
+    
     document.getElementById('product-description').textContent = description || "No description available.";
     document.getElementById('product-price').textContent = price || "$29.99"; // Default price
 }
@@ -75,5 +79,6 @@ function addToCart() {
 // Function to navigate to the product page with parameters
 function goToProductPage(name, image, description, price) {
     const url = `product.html?name=${encodeURIComponent(name)}&image=${encodeURIComponent(image)}&description=${encodeURIComponent(description)}&price=${encodeURIComponent(price)}`;
+    console.log("Navigating to:", url); // Debug log
     window.location.href = url;
 }
