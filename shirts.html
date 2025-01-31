@@ -22,8 +22,6 @@
     <aside class="sidebar" id="sidebar">
         <ul>
             <li><a href="index.html" onclick="closeSidebar()">Home</a></li>
-            
-            <!-- Apparel Dropdown -->
             <li>
                 <a href="#" onclick="toggleDropdown('apparelDropdown')">Apparel ▼</a>
                 <ul id="apparelDropdown" class="dropdown">
@@ -31,38 +29,15 @@
                     <li><a href="hats.html" onclick="closeSidebar()">Hats</a></li>
                 </ul>
             </li>
-    
-            <!-- Collection Dropdown -->
             <li>
                 <a href="#" onclick="toggleDropdown('collectionDropdown')">Collection ▼</a>
                 <ul id="collectionDropdown" class="dropdown">
                     <li><a href="OG Collection.html" onclick="closeSidebar()">OG Collection</a></li>
                 </ul>
             </li>
-    
-            <!-- Cart Option at the Bottom -->
             <li><a href="cart.html" onclick="closeSidebar()">🛒 Cart</a></li>
         </ul>
     </aside>
-    
-    <style>
-        .dropdown {
-            display: none;
-            list-style: none;
-            padding-left: 15px;
-        }
-        .dropdown li {
-            padding: 5px 0;
-        }
-    </style>
-    
-    <script>
-        function toggleDropdown(id) {
-            var dropdown = document.getElementById(id);
-            dropdown.style.display = (dropdown.style.display === "block") ? "none" : "block";
-        }
-    </script>
-    
 
     <main>
         <div class="text-box">
@@ -71,19 +46,19 @@
         </div>
 
         <div class="product-container">
-            <div class="product-box">
+            <div class="product-box" onclick="redirectToProduct('red-tee')">
                 <p>Red Tee</p>
                 <img src="images/placeholder.png" alt="Red Tee">
             </div>
-            <div class="product-box">
+            <div class="product-box" onclick="redirectToProduct('black-tee')">
                 <p>Black Tee</p>
                 <img src="images/placeholder.png" alt="Black Tee">
             </div>
-            <div class="product-box">
+            <div class="product-box" onclick="redirectToProduct('white-red-tee')">
                 <p>White and Red Tee</p>
-                <img src="images/placeholder.png" alt="White and Red Tee">
+                <img src="https://raw.githubusercontent.com/jaredowens/slice_life_web/4140260fb224766ff20d7d19c5ab9765bad3883e/background.png" alt="White and Red Tee">
             </div>
-            <div class="product-box">
+            <div class="product-box" onclick="redirectToProduct('white-black-tee')">
                 <p>White and Black Tee</p>
                 <img src="images/placeholder.png" alt="White and Black Tee">
             </div>
@@ -93,12 +68,8 @@
     <footer>
         <h1 class="footer-text">Slice Life</h1>
         <p>&copy; 2025 Slice Life. All Rights Reserved.</p>
-        <script>
-        document.getElementById('year').textContent = new Date().getFullYear(); 
-    </script>
     </footer>
 
-    <script src="apparel.js"></script>
-
+    <script src="shirts.js"></script>
 </body>
 </html>

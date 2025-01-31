@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - Slice Life</title>
+    <link rel="stylesheet" href="product.css">
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+        <h1 class="logo-text">Slice Life</h1>
+        <a href="cart.html" class="cart-button">🛒 Cart</a>
+    </header>
+
+    <nav id="sidebar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shirts.html">Shirts</a></li>
+            <li><a href="hats.html">Hats</a></li>
+            <li><a href="cart.html">Cart</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="product-details">
+            <img id="product-image" src="" alt="Product Image" onerror="this.src='fallback.jpg'; console.error('Image failed to load');">
+            <h2 id="product-name"></h2>
+            <p id="product-description"></p>
+            <p class="price" id="product-price"></p>
+
+            <div class="size-selector">
+                <label for="size">Size:</label>
+                <select id="size">
+                    <option value="S">Small</option>
+                    <option value="M">Medium</option>
+                    <option value="L">Large</option>
+                    <option value="XL">X-Large</option>
+                </select>
+            </div>
+
+            <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+        </div>
+    </main>
+
+    <footer>
+        <p class="footer-text">© 2025 Slice Life. All rights reserved.</p>
+    </footer>
+
+    <script src="product.js"></script>
+</body>
+</html>

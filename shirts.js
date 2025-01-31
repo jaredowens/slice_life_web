@@ -15,3 +15,7 @@ document.addEventListener('click', function(event) {
         closeSidebar();
     }
 });
+
+function redirectToProduct(productId) {
+    window.location.href = `product.html?product=${productId}`;
+}
